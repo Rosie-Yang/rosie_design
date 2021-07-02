@@ -3,19 +3,30 @@
     <h2 class="page-title mb-0">Category - 1</h2>
     <el-divider class="mt-1 mb-3"></el-divider>
     <div class="row mb-5">
-      <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data" :key="file.id">
+      <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data1" :key="file.id">
         <div class="video-preview-wrap" @click="playVideo(file.video)"
         :style="{'backgroundImage': `url(${file.item})`}">
           <button class="play-btn"><i class="fas fa-play"></i></button>
         </div>
       </div>
     </div>
-    <!-- next -->
+    <!-- Category - 2 -->
     <h2 class="page-title mb-0">Category - 2</h2>
     <el-divider class="mt-1 mb-3"></el-divider>
     <div class="row mb-5">
-      <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data" :key="file.id">
-        <div class="video-preview-wrap" @click="modalShow = true"
+      <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data2" :key="file.id">
+        <div class="video-preview-wrap" @click="playVideo(file.video)"
+        :style="{'backgroundImage': `url(${file.item})`}">
+          <button class="play-btn"><i class="fas fa-play"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- Category - 3 -->
+    <h2 class="page-title mb-0">Category - 3</h2>
+    <el-divider class="mt-1 mb-3"></el-divider>
+    <div class="row mb-5">
+      <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data3" :key="file.id">
+        <div class="video-preview-wrap" @click="playVideo(file.video)"
         :style="{'backgroundImage': `url(${file.item})`}">
           <button class="play-btn"><i class="fas fa-play"></i></button>
         </div>
@@ -38,7 +49,6 @@
 <script>
 import VideoPlayer from '@/components/VideoPlayer.vue';
 import videoData from '@/collection/videos';
-import videos from '@/assets/video/test.mp4';
 
 export default {
   components: {
@@ -54,7 +64,7 @@ export default {
         muted: true,
         sources: [
           {
-            src: videos,
+            src: null,
             type: 'video/mp4',
           },
         ],
@@ -76,6 +86,12 @@ export default {
 
 <style lang="scss">
 .video-preview-wrap{
+  &:hover{
+    .play-btn{
+      color: #ece9e9;
+    }
+  }
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -96,19 +112,11 @@ export default {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  font-size: 16px;
+  font-size: 32px;
   color: #ffffff;
-  width: 40px;
-  height: 40px;
-  padding-right: 2px;
   line-height: 1;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+  border-width: 0;
   background: transparent;
-  &:hover, &:active{
-    color: #ece9e9;
-    border-color: #ece9e9;
-  }
 }
 .cus-modal-wrap{
   z-index: 1450;

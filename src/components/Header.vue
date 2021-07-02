@@ -9,16 +9,16 @@
       @click="navbarShow = !navbarShow"
       style="font-family: serif;" v-if="!index">
         <li class="nav-item" :class="{'focus-path': path === '/videos'}">
-          <router-link to="/videos">videos</router-link>
+          <router-link to="/videos">Videos</router-link>
         </li>
         <li class="nav-item" :class="{'focus-path': path === '/pictures'}">
-          <router-link to="/pictures">pictures</router-link>
+          <router-link to="/pictures">Pictures</router-link>
         </li>
         <li class="nav-item" :class="{'focus-path': path === '/graphic_design'}">
-          <router-link to="/graphic_design">graphic-design</router-link>
+          <router-link to="/graphic_design">Graphic Design</router-link>
         </li>
         <li class="nav-item" :class="{'focus-path': path === '/website_layout'}">
-          <router-link to="/website_layout">website-layout</router-link>
+          <router-link to="/website_layout">Web Image Design</router-link>
         </li>
         <li class="nav-item" :class="{'focus-path': path === '/illustration'}">
           <router-link to="/illustration">illustration</router-link>

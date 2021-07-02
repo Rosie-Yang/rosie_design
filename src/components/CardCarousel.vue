@@ -17,13 +17,13 @@
        <div class="card-carousel-item" @mouseover="isStared = index">
           <div class="camera">
             <div class="space" :class="{'space-rotate': isStared === index}">
-                <div class="card-face p-4" :class="item.classObjCardFace">
+                <div class="card-face p-4" :style="{'backgroundImage': `url(${item.cardFaceBg})`}">
                   <p class="card-text-bg h-100 mb-0
                   d-flex align-items-center justify-content-center">
                     <strong>{{item.describes}}</strong>
                   </p>
                 </div>
-                <div class="card-back p-3">
+                <div class="card-back p-3" :style="{'backgroundImage': `url(${item.cardBackBg})`}">
                   <router-link :to="item.path"
                   class="d-block h-100 card-text-bg text-decoration-none py-3
                   d-flex flex-column align-items-center justify-content-around">
@@ -46,47 +46,53 @@
 </template>
 
 <script>
+import faceVideos from '@/assets/img/card_carousel/face_videos.jpg';
+import backVideos from '@/assets/img/card_carousel/back_videos.jpg';
+import faceRetouching from '@/assets/img/card_carousel/face_retouching.jpg';
+import backRetouching from '@/assets/img/card_carousel/back_retouching.jpg';
+import faceGraphic from '@/assets/img/card_carousel/face_graphic.jpg';
+import backGraphic from '@/assets/img/card_carousel/back_graphic.jpg';
+import faceWeb from '@/assets/img/card_carousel/face_web.jpg';
+import backWeb from '@/assets/img/card_carousel/back_web.jpg';
+import faceIllustration from '@/assets/img/card_carousel/face_illustration.jpg';
+import backIllustration from '@/assets/img/card_carousel/back_illustration.jpg';
+
 export default {
   data() {
     return {
       data: [
         {
           path: 'videos',
-          classObjCardFace: {
-            'face-bg-videos': true,
-          },
+          cardFaceBg: faceVideos,
+          cardBackBg: backVideos,
           describes: 'Video Collection',
           detail: 'include my project videos & life videos',
         },
         {
           path: 'pictures',
-          classObjCardFace: {
-            'face-bg-pictures': true,
-          },
+          cardFaceBg: faceRetouching,
+          cardBackBg: backRetouching,
           describes: 'Pictures Retouching',
           detail: 'my pictures retouching with prople & products',
         },
         {
           path: 'graphic_design',
-          classObjCardFace: {
-            'face-bg-graphic-design': true,
-          },
+          cardFaceBg: faceGraphic,
+          cardBackBg: backGraphic,
           describes: 'Graphic Design',
           detail: 'my graphic design job',
         },
         {
-          path: 'website_layout',
-          classObjCardFace: {
-            'face-bg-website-layout': true,
-          },
+          path: 'Web Image Design',
+          cardFaceBg: faceWeb,
+          cardBackBg: backWeb,
           describes: 'Website Index Design',
           detail: 'website index design work in offcial website',
         },
         {
           path: 'illustration',
-          classObjCardFace: {
-            'face-bg-illustration': true,
-          },
+          cardFaceBg: faceIllustration,
+          cardBackBg: backIllustration,
           describes: 'illustration Collection',
           detail: 'own my illustration collection',
         },
@@ -171,7 +177,6 @@ export default {
   text-align:center;
 }
 .card-face{
-  // background-image: url('../assets/img/item-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -186,28 +191,11 @@ export default {
     color: rgb(57, 56, 56);
   }
 }
-.face-bg-videos{
-  background-image: url('../assets/img/item-1.jpg');
-}
-.face-bg-pictures{
-  background-image: url('../assets/img/item-2.jpg');
-}
-.face-bg-graphic-design{
-  background-image: url('../assets/img/item-3.jpg');
-}
-.face-bg-website-layout{
-  background-image: url('../assets/img/item-4.jpg');
-}
-.face-bg-illustration{
-  background-image: url('../assets/img/item-5.jpg');
-}
 .card-back{
-  background-image: url('../assets/img/test-item.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   transform: translateX(0px) translateY(0px) translateZ(-1px) rotateY(180deg);
 }
-//
 
 </style>
