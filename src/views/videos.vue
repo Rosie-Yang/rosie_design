@@ -4,8 +4,9 @@
     <el-divider class="mt-1 mb-3"></el-divider>
     <div class="row mb-5">
       <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data" :key="file.id">
-        <div class="video-preview-wrap" :style="{'backgroundImage': `url(${file.item})`}">
-          <button class="play-btn" @click="modalShow = true"><i class="fas fa-play"></i></button>
+        <div class="video-preview-wrap" @click="playVideo(file.video)"
+        :style="{'backgroundImage': `url(${file.item})`}">
+          <button class="play-btn"><i class="fas fa-play"></i></button>
         </div>
       </div>
     </div>
@@ -13,22 +14,21 @@
     <h2 class="page-title mb-0">Category - 2</h2>
     <el-divider class="mt-1 mb-3"></el-divider>
     <div class="row mb-5">
-      <div class="col-4">
-        <VideoPlayer :options="videoOptions"/>
+      <div class="col-6 col-md-4 mb-fix" v-for="file in dataArr.data" :key="file.id">
+        <div class="video-preview-wrap" @click="modalShow = true"
+        :style="{'backgroundImage': `url(${file.item})`}">
+          <button class="play-btn"><i class="fas fa-play"></i></button>
+        </div>
       </div>
-      <div class="col-4">
-        <VideoPlayer :options="videoOptions"/>
-      </div>
-      <div class="col-4">3</div>
     </div>
     <el-divider></el-divider>
     <div class="cus-modal-wrap p-3" v-if="modalShow" @click.self="modalShow = false">
       <div class="modal-content">
-        <div class="text-right">
+        <!-- <div class="text-right">
           <button class="modal-hide-btn" @click="modalShow = false">
             <i class="el-icon-close"></i>
           </button>
-        </div>
+        </div> -->
         <VideoPlayer :options="videoOptions"/>
       </div>
     </div>
@@ -49,7 +49,7 @@ export default {
       modalShow: false,
       dataArr: videoData,
       videoOptions: {
-        autoplay: false,
+        autoplay: true,
         controls: true,
         muted: true,
         sources: [
@@ -66,6 +66,10 @@ export default {
   beforeDestroy() {
   },
   methods: {
+    playVideo(video) {
+      this.videoOptions.sources[0].src = video;
+      this.modalShow = true;
+    },
   },
 };
 </script>
@@ -96,7 +100,7 @@ export default {
   color: #ffffff;
   width: 40px;
   height: 40px;
-  text-indent: 2px;
+  padding-right: 2px;
   line-height: 1;
   border-radius: 50%;
   border: 2px solid #ffffff;
@@ -113,22 +117,22 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.75);
 }
 .modal-content{
+  padding: 3px;
   z-index: 1500;
   position: fixed;
   width: 80%;
-  top: 5%;
-  bottom: 5%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background: rgba(7, 7, 7, 0.8);
+  transform: translateX(-50%) translateY(-50%);
+  background: rgba(161, 160, 160, 0.8);
 }
 .modal-hide-btn{
   border-width: 0;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 25px;
   background: transparent;
 }
 </style>

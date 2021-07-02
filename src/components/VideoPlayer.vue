@@ -23,9 +23,7 @@ export default {
     };
   },
   mounted() {
-    this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady() {
-      console.log('onPlayerReady', this);
-    });
+    this.player = videojs(this.$refs.videoPlayer, this.options);
   },
   beforeDestroy() {
     if (this.player) {
@@ -39,5 +37,10 @@ export default {
   .video-js{
     width: 100%;
     height: 500px;
+    .vjs-big-play-button{
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 </style>
