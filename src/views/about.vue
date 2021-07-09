@@ -17,13 +17,13 @@
         </div>
       </div>
       <div class="col-12 col-md-5 order-0 order-md-1 mb-3 mb-md-0">
-        <h2 class="page-title"> —— About.</h2>
+        <h2 class="page-title"> &mdash; About.</h2>
         <div class="user-img-bg"></div>
       </div>
     </div>
     <div class="row no-gutters justify-content-center">
       <div class="col-12 col-md-5 exp-list-bg py-3">
-        <h2 class="page-title text-center">Experience ——</h2>
+        <h2 class="page-title text-center">Experience &mdash;</h2>
         <div class="px-5 py-4">
           <img class="w-100" src="@/assets/img/about_page/about-3.jpg" alt="">
         </div>
