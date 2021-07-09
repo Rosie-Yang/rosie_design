@@ -20,71 +20,71 @@ export default {
   data: [
     {
       item: img1,
-      id: 1,
+      id: 'r1',
     },
     {
       item: img2,
-      id: 2,
+      id: 'r2',
     },
     {
       item: img3,
-      id: 3,
+      id: 'r3',
     },
     {
       item: img4,
-      id: 4,
+      id: 'r4',
     },
     {
       item: img5,
-      id: 5,
+      id: 'r5',
     },
     {
       item: img6,
-      id: 6,
+      id: 'r6',
     },
     {
       item: img7,
-      id: 7,
+      id: 'r7',
     },
     {
       item: img8,
-      id: 8,
+      id: 'r8',
     },
     {
       item: img9,
-      id: 9,
+      id: 'r9',
     },
     {
       item: img10,
-      id: 10,
+      id: 'r10',
     },
     {
       item: img11,
-      id: 11,
+      id: 'r11',
     },
     {
       item: img12,
-      id: 12,
+      id: 'r12',
     },
     {
       item: img13,
-      id: 13,
+      id: 'r13',
     },
     {
       item: img14,
-      id: 14,
+      id: 'r14',
     },
     {
       item: img15,
-      id: 15,
+      id: 'r15',
     },
     {
       item: img16,
-      id: 16,
+      id: 'r16',
     },
     {
       item: img17,
-      id: 17,
+      id: 'r17',
     },
   ],
 };

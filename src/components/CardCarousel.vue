@@ -26,12 +26,12 @@
                 <div class="card-back p-3" :style="{'backgroundImage': `url(${item.cardBackBg})`}">
                   <router-link :to="item.path"
                   class="d-block h-100 card-text-bg text-decoration-none py-3
-                  d-flex flex-column align-items-center justify-content-around">
-                    <span>{{item.detail}}</span>
+                  d-flex flex-column align-items-center justify-content-between">
+                    <em>{{item.detail}}</em>
                     <br>
-                    <span>view more
+                    <em>view more
                       <span><i class="far fa-hand-point-right"></i></span>
-                    </span>
+                    </em>
                   </router-link>
                 </div>
             </div>
@@ -83,18 +83,18 @@ export default {
           detail: 'my graphic design job',
         },
         {
-          path: 'Web Image Design',
+          path: 'website_layout',
           cardFaceBg: faceWeb,
           cardBackBg: backWeb,
-          describes: 'Website Index Design',
+          describes: 'Web Image Design',
           detail: 'website index design work in offcial website',
         },
         {
-          path: 'illustration',
+          path: 'about',
           cardFaceBg: faceIllustration,
           cardBackBg: backIllustration,
-          describes: 'illustration Collection',
-          detail: 'own my illustration collection',
+          describes: 'About Me',
+          detail: 'my skills & experience',
         },
       ],
       isStared: null,
@@ -187,7 +187,7 @@ export default {
     color: rgb(57, 56, 56);
     font-size: 20px;
   }
-  span{
+  em{
     color: rgb(57, 56, 56);
   }
 }

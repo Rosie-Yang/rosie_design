@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss">
 $header-height: 80;
-$footer-height: 50;
+$footer-height: 82;
 
   .index-container{
     height: calc(100vh - #{$header-height}px - #{$footer-height}px);

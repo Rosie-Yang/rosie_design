@@ -13,7 +13,7 @@
     </div>
     <el-divider class="my-1"></el-divider>
     <div class="row" style="font-size: 0px;">
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[0].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
@@ -21,7 +21,7 @@
           :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
         </div>
       </div>
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[1].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
@@ -29,7 +29,7 @@
           :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
         </div>
       </div>
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[2].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
@@ -37,8 +37,16 @@
           :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
         </div>
       </div>
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[3].images" :key="pic.id" class="position-relative mask-hover">
+          <div class="h-100 w-100 position-absolute img-mask"
+          @click="showSingle(pic.item)"></div>
+          <el-image :src="pic.item" :lazy="true"
+          :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
+        <div v-for="pic in collection[4].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
           <el-image :src="pic.item" :lazy="true"
@@ -68,6 +76,9 @@ export default {
       dataArr: null,
       arrUnit: 4,
       collection: [
+        {
+          images: [],
+        },
         {
           images: [],
         },
@@ -110,7 +121,9 @@ export default {
     },
     checkScreenSize() {
       this.screenSize = window.innerWidth;
-      if (this.screenSize >= 992) {
+      if (this.screenSize >= 1441) {
+        this.arrUnit = 5;
+      } else if (this.screenSize >= 992) {
         this.arrUnit = 4;
       } else if (this.screenSize >= 768) {
         this.arrUnit = 3;
@@ -150,6 +163,12 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 1441px) {
+  .col-xxl-2-fix{
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
   img{
     width: 100%;
   }

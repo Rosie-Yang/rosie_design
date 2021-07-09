@@ -19,7 +19,7 @@
         <span><i class="fas fa-arrow-up"></i></span>
       </div>
     </el-backtop>
-    <footer class="p-3 footer-wrap" :class="{'text-center': !isIndex}">
+    <footer class="p-3 footer-wrap pt-5" :class="{'text-center': !isIndex}">
       <em class="mb-2">
         Design by Rosie Yang, development by Hsueh-Han Chen.
       </em>
@@ -78,7 +78,7 @@ export default {
   }
   .bg-wrap{
     @media (min-width: 992px) {
-      background-image: url('../assets/img/test.jpg');
+      background-image: url('../assets/img/index-bg.jpg');
       background-position: center left;
       background-size: contain;
       background-repeat: no-repeat;

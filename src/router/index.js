@@ -47,8 +47,8 @@ export default new VueRouter({
           component: WebsiteLayout,
         },
         {
-          name: 'Illustration',
-          path: 'illustration',
+          name: 'About',
+          path: 'about',
           component: Illustration,
         },
       ],

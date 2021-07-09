@@ -20,8 +20,8 @@
         <li class="nav-item" :class="{'focus-path': path === '/website_layout'}">
           <router-link to="/website_layout">Web Image Design</router-link>
         </li>
-        <li class="nav-item" :class="{'focus-path': path === '/illustration'}">
-          <router-link to="/illustration">illustration</router-link>
+        <li class="nav-item" :class="{'focus-path': path === '/about'}">
+          <router-link to="/about">About</router-link>
         </li>
       </ul>
       <button class="nav-btn  d-block d-lg-none" v-if="!index"

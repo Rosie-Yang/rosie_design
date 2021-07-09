@@ -16,55 +16,55 @@ export default {
   data: [
     {
       item: img1,
-      id: 1,
+      id: 's1',
     },
     {
       item: img2,
-      id: 2,
+      id: 's2',
     },
     {
       item: img3,
-      id: 3,
+      id: 's3',
     },
     {
       item: img4,
-      id: 4,
+      id: 's4',
     },
     {
       item: img5,
-      id: 5,
+      id: 's5',
     },
     {
       item: img6,
-      id: 6,
+      id: 's6',
     },
     {
       item: img7,
-      id: 7,
+      id: 's7',
     },
     {
       item: img8,
-      id: 8,
+      id: 's8',
     },
     {
       item: img9,
-      id: 9,
+      id: 's9',
     },
     {
       item: img10,
-      id: 10,
+      id: 's10',
     },
     {
       item: img11,
-      id: 11,
+      id: 's11',
     },
     {
       item: img12,
-      id: 12,
+      id: 's12',
     },
     {
       item: img13,
-      id: 13,
+      id: 's13',
     },
   ],
 };

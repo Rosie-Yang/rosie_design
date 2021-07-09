@@ -13,43 +13,43 @@ export default {
   data: [
     {
       item: img1,
-      id: 1,
+      id: 'g1',
     },
     {
       item: img2,
-      id: 2,
+      id: 'g2',
     },
     {
       item: img3,
-      id: 3,
+      id: 'g3',
     },
     {
       item: img4,
-      id: 4,
+      id: 'g4',
     },
     {
       item: img5,
-      id: 5,
+      id: 'g5',
     },
     {
       item: img6,
-      id: 6,
+      id: 'g6',
     },
     {
       item: img7,
-      id: 7,
+      id: 'g7',
     },
     {
       item: img8,
-      id: 8,
+      id: 'g8',
     },
     {
       item: img9,
-      id: 9,
+      id: 'g9',
     },
     {
       item: img10,
-      id: 10,
+      id: '10',
     },
   ],
 };
