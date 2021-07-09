@@ -7,7 +7,8 @@ import Videos from '@/views/videos.vue';
 import Pictures from '@/views/pictures.vue';
 import GraphicDesign from '@/views/graphicDesign.vue';
 import WebsiteLayout from '@/views/websiteLayout.vue';
-import Illustration from '@/views/illustration.vue';
+import About from '@/views/about.vue';
+// import Illustration from '@/views/illustration.vue';
 
 Vue.use(VueRouter);
 
@@ -49,7 +50,7 @@ export default new VueRouter({
         {
           name: 'About',
           path: 'about',
-          component: Illustration,
+          component: About,
         },
       ],
     },
