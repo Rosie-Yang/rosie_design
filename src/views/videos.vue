@@ -18,7 +18,13 @@
         class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"></div>
           <button class="play-btn"><i class="fas fa-play"></i></button>
-          <el-image :src="file.item" :lazy="true"></el-image>
+          <el-image class="w-100" :src="file.item" lazy>
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
@@ -26,7 +32,13 @@
         class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"></div>
           <button class="play-btn"><i class="fas fa-play"></i></button>
-          <el-image :src="file.item" :lazy="true"></el-image>
+          <el-image class="w-100" :src="file.item" lazy>
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
@@ -34,7 +46,13 @@
         class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"></div>
           <button class="play-btn"><i class="fas fa-play"></i></button>
-          <el-image :src="file.item" :lazy="true"></el-image>
+          <el-image class="w-100" :src="file.item" lazy>
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
@@ -42,7 +60,13 @@
         class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"></div>
           <button class="play-btn"><i class="fas fa-play"></i></button>
-          <el-image :src="file.item" :lazy="true"></el-image>
+          <el-image class="w-100" :src="file.item" lazy>
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
@@ -50,7 +74,13 @@
         class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"></div>
           <button class="play-btn"><i class="fas fa-play"></i></button>
-          <el-image :src="file.item" :lazy="true"></el-image>
+          <el-image class="w-100" :src="file.item" lazy>
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
     </div>

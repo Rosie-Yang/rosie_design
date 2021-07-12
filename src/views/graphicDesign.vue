@@ -17,40 +17,70 @@
         <div v-for="pic in collection[0].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
-          <el-image :src="pic.item" :lazy="true"
-          :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
+          <el-image class="w-100" :src="pic.item" lazy
+          :class="{'cus-shadow': focusCollection === 'article'}">
+            <div slot="placeholder" class="bg-light-gary w-100
+              d-flex align-items-center justify-content-center"
+              style="height: 200px; font-size: 20px;">
+                <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[1].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
-          <el-image :src="pic.item" :lazy="true"
-          :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
+          <el-image class="w-100" :src="pic.item" lazy
+          :class="{'cus-shadow': focusCollection === 'article'}">
+            <div slot="placeholder" class="bg-light-gary w-100
+              d-flex align-items-center justify-content-center"
+              style="height: 200px; font-size: 20px;">
+                <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[2].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
-          <el-image :src="pic.item" :lazy="true"
-          :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
+          <el-image class="w-100" :src="pic.item" lazy
+          :class="{'cus-shadow': focusCollection === 'article'}">
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[3].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
-          <el-image :src="pic.item" :lazy="true"
-          :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
+          <el-image class="w-100" :src="pic.item" lazy
+          :class="{'cus-shadow': focusCollection === 'article'}">
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2-fix">
         <div v-for="pic in collection[4].images" :key="pic.id" class="position-relative mask-hover">
           <div class="h-100 w-100 position-absolute img-mask"
           @click="showSingle(pic.item)"></div>
-          <el-image :src="pic.item" :lazy="true"
-          :class="{'cus-shadow': focusCollection === 'article'}"></el-image>
+          <el-image class="w-100" :src="pic.item" lazy
+          :class="{'cus-shadow': focusCollection === 'article'}">
+            <div slot="placeholder" class="bg-light-gary w-100
+            d-flex align-items-center justify-content-center"
+            style="height: 200px; font-size: 20px;">
+              <h2 class="text-white"><i class="el-icon-loading"></i></h2>
+            </div>
+          </el-image>
         </div>
       </div>
     </div>
